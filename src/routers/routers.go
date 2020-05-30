@@ -8,7 +8,9 @@ import (
 )
 
 func Load(g *gin.Engine) {
-	g.Use(gin.Recovery())
+	//g.Use(gin.Recovery())
+	g.Use(middlewares.GinLogger(), middlewares.GinRecovery(false))
+
 	g.Use(middlewares.SetRequestId)
 	//不缓存
 	g.Use(middlewares.NoCache)
