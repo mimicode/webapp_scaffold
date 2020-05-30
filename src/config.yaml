@@ -1,0 +1,24 @@
+runmode: debug                 # 开发模式, debug, release, test
+addr: :8881                  # HTTP绑定端口
+name: apiserver              # API Server的名字
+url: http://127.0.0.1:8881   #服务地址
+health_count: 10 # 启动监测次数
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  db: webapp
+  user: root
+  password: root
+redis:
+  host: 127.0.0.1
+  port: 6379
+  db: 0
+log:
+  level: debug
+  filename: ../logs/app.log
+  max_size: 100
+  max_age: 30
+  max_backups: 7
+
+
+
